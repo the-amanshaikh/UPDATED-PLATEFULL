@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Platefull</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="left-panel">
+            <div class="logo">
+                <h1>Platefull</h1>
+                <p class="tagline">Reducing food waste, one plate at a time</p>
+            </div>
+            <div class="illustration">
+                <img src="https://img.freepik.com/free-vector/tiny-people-standing-near-box-donation-food-delivery-volunteers-giving-healthy-grocery-goods-charity-flat-vector-illustration-social-support-humanitarian-help-community-sharing-concept_74855-21023.jpg?t=st=1743443948~exp=1743447548~hmac=870d199c0306b1c910712360a629c870016cd3fa007867d6fbbf582e0f4f25e1&w=2000" alt="Food donation illustration">
+            </div>
+            <div class="benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <p>Donate surplus food easily</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-users"></i>
+                    <p>Connect with organizations in need</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-leaf"></i>
+                    <p>Reduce environmental impact</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="form-header">
+                <h2>Create an Account</h2>
+                <p>Join our community and start making a difference today</p>
+            </div>
+            <div class="form-cont">
+                <form method="post" action="/create" class="registration-form">
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age"><i class="fas fa-birthday-cake"></i> Age</label>
+                        <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-user-plus"></i> Register
+                    </button>
+                </form>
+            </div>
+            <div class="form-footer">
+                <p>Already have an account? <a href="/login">Login</a></p>
+                <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Form | Platefull</title>
+    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> -->
+    
+</head>
+<body>
+    <div class="page-container">
+        <div class="sidebar">
+            <div class="logo">
+                <h2>Platefull</h2>
+                <span class="tagline">Make a difference</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/login2"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="/profile"><i class="fas fa-hand-holding-heart"></i> Donate Food</a></li>
+                    <li><a href="/Userdisplay"><i class="fas fa-list"></i> Your Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="main-content">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Welcome, <%= user.username %></h1>
+                    <h2>Food Donation Form</h2>
+                    <p>Fill out the form below to donate food and help those in need</p>
+                </div>
+                
+                <form method="post" action="/Userdisplay">
+                    <div class="form-group">
+                        <label for="pname"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="pname" name="pname" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="paddress"><i class="fas fa-map-marker-alt"></i> Your Address</label>
+                        <input type="text" id="paddress" name="paddress" placeholder="Enter your complete address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pcontact"><i class="fas fa-phone"></i> Contact Number</label>
+                        <input type="tel" id="pcontact" name="pcontact" placeholder="Enter your contact number" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pquantity"><i class="fas fa-users"></i> Quantity (Serves)</label>
+                            <input type="number" id="pquantity" name="pquantity" placeholder="Number of people" min="1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="food_type"><i class="fas fa-utensils"></i> Food Type</label>
+                            <select id="food_type" name="food_type" required>
+                                <option value="">Select Food Type</option>
+                                <option value="thali">Thali</option>
+                                <option value="rice">Rice</option>
+                                <option value="sweets">Sweets</option>
+                                <option value="fruits">Fruits</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="img"><i class="fas fa-image"></i> Image Link (optional)</label>
+                        <input type="url" id="img" name="img" placeholder="Paste image URL here">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes"><i class="fas fa-sticky-note"></i> Additional Notes</label>
+                        <textarea id="notes" name="notes" placeholder="Any special instructions or details about the food"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submit-btn">
+                        <i class="fas fa-heart"></i> Donate Now
+                    </button>
+                </form>
+            </div>
+            
+            <div class="donation-info">
+                <h3>Why Donate Food?</h3>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <i class="fas fa-leaf"></i>
+                        <h4>Reduce Waste</h4>
+                        <p>Help reduce the 1.3 billion tons of food wasted globally each year</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-hands-helping"></i>
+                        <h4>Help Others</h4>
+                        <p>Provide nutritious meals to those who need it most in your community</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4>Environmental Impact</h4>
+                        <p>Reduce greenhouse gas emissions from food waste in landfills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script> -->
+
+    <!-- <script src="/javascripts/notify.js"></script> -->
+</body>
+</html>
+

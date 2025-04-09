@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Dashboard | Platefull</title>
+    <link rel="stylesheet" href="/styles/display.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>Platefull</h2>
+            <span class="tagline">Dashboard</span>
+        </div>
+        <nav>
+            <ul>
+                <a href="/login2"><li><i class="fas fa-home"></i> Home</li></a>
+                <li class="active"><i class="fas fa-utensils"></i> Your Donations</li>
+                <!-- <li><i class="fas fa-history"></i> Donation History</li> -->
+                <!-- <li><i class="fas fa-user"></i> My Profile</li> -->
+                <!-- <li><i class="fas fa-cog"></i> Settings</li> -->
+                <a href="/myRequests"><li><i class="fas fa-sign-out-alt"></i> Request</li></a></li>
+                <a href="/logout"><li><i class="fas fa-sign-out-alt"></i> Logout</li></a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <p>Need help? <a href="#">Contact Support</a></p>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <div class="content-header">
+            <h1>Your Donations</h1>
+        </div>
+
+        <div class="user-list">
+            <% user.posts.forEach(function(post) { %>
+            <div class="user-card">
+                <div class="card-badge">Available</div>
+                <a href="/order/<%= post._id %>" class="order-btn">Order Now</a>
+                <div class="card-image">
+                    <img src="https://th.bing.com/th/id/OIP.kAR0YfIVMOtMldlUxErYyQHaEo?rs=1&pid=ImgDetMain" alt="<%= post.food_type %>">
+                </div>
+                <div class="user-details">
+                    <h2><%= post.pname %></h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <p><%= post.pcontact %></p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p><%= post.paddress %></p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-utensils"></i>
+                            <p><%= post.food_type %></p>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-users"></i>
+                            <p>Serves <%= post.pquantity %> people</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a href="/edit/<%= post._id %>" class="edit-btn"><i class="fas fa-edit"></i> Edit</a>
+                    <a href="/delete/<%= post._id %>" class="delete-btn"><i class="fas fa-trash"></i> Delete</a>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+        <div class="pagination">
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

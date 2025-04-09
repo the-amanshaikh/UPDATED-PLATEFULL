@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* background: linear-gradient(135deg, #a8e063, #56ab2f); */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background: rgba(0, 0, 0, 1);
+    color: #a8e063;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 0 20px #a8e063;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: pulse 2s infinite alternate;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #a8e063;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 1px solid #a8e063;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+
+nav a:hover {
+    background: #a8e063;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #a8e063;
+}
+
+/* Main Section */
+main {
+    width: 90%;
+    max-width: 700px;
+    background-color: #003844;
+    backdrop-filter: blur(25px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(88, 170, 60, 0.8);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    position: relative;
+    z-index: 1;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 15px #56ab2f;
+}
+
+input[type="submit"] {
+    background: #56ab2f;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: #fff;
+    color: #56ab2f;
+    box-shadow: 0 0 20px #56ab2f;
+} */
+
+/* Foodie Animation */
+/* .food {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    animation: float 6s infinite alternate;
+    opacity: 0.9;
+}
+
+.salad {
+    top: 15%;
+    left: 10%;
+    animation-delay: 1s;
+}
+
+.pizza {
+    top: 50%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.burger {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.fruits {
+    bottom: 5%;
+    right: 15%;
+    animation-delay: 4s;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 15px #a8e063;
+    }
+    100% {
+        text-shadow: 0 0 35px #56ab2f;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-40px) rotate(10deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .food {
+        width: 90px;
+        height: 90px;
+    }
+}

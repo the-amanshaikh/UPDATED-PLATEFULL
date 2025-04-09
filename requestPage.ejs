@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% requests.forEach(r => { %>
+        <div class="request-card">
+            <p>Post: <%= r.post.pname %></p>
+            <p>Requested by: <%= r.requestedBy.username %></p>
+            <form method="POST" action="/requests/<%= r._id %>/approve">
+                <button type="submit">Approve</button>
+            </form>
+            <form method="POST" action="/requests/<%= r._id %>/reject">
+                <button type="submit">Reject</button>
+            </form>
+            <p>Status: <%= r.status %></p>
+        </div>
+    <% }) %>
+</body>
+</html>
